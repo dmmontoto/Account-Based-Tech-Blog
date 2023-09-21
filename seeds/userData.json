@@ -2,21 +2,25 @@
     {
       "name": "Sal",
       "email": "sal@hotmail.com",
+      "username": "BigBallerSal",
       "password": "password12345"
     },
     {
       "name": "Lernantino",
       "email": "lernantino@gmail.com",
+      "username": "GreenDino21",
       "password": "password12345"
     },
     {
       "name": "Amiko",
       "email": "amiko2k20@aol.com",
+      "username": "OgBullsFan",
       "password": "password12345"
     },
     {
         "name": "David Montoto",
         "email": "david_montoto@icloud.com",
+        "username": "Dmontoto",
         "password": "Programmer123"
     }
   ]
