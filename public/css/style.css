@@ -1,0 +1,54 @@
+header, .project:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+}
+  
+.no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+}
+  
+.dollar-amount {
+    color: #056605;
+    font-weight: bold;
+    margin-left: -5px;
+}
+  
+#title-box {
+    background-color: #056605;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding: 2rem;
+    background-color: #f0f0f0; /* Set the background color of the header */
+  }
+
+  /* Style for the nav */
+  nav {
+    margin-right: 20px; /* Add some spacing between nav and title-box */
+  }
+
+  /* Style for the title-box */
+  #title-box {
+    background-color: #007acc; /* Set a different background color for the title box */
+    padding: 10px; /* Add padding to the title box */
+    border-radius: 5px; /* Add rounded corners to the title box */
+  }
+
+  #page-title {
+    margin: 0; /* Remove default margin for the h1 element */
+    color: #fff; /* Set the text color for the title */
+  }
