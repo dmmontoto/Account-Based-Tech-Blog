@@ -1,5 +1,9 @@
+body {
+    background-color: #007acc;
+}
+
 header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
   }
   
 .no-button {
@@ -33,22 +37,35 @@ header {
     flex-direction: column;
     align-items: flex-start; /* Align items to the left */
     padding: 2rem;
-    background-color: #f0f0f0; /* Set the background color of the header */
+    background-color: #362f2f; /* Set the background color of the header */
   }
 
   /* Style for the nav */
   nav {
-    margin-right: 20px; /* Add some spacing between nav and title-box */
+    margin: 10px; /* Add some spacing between nav and title-box */
+    font-size: 20px;
   }
+
+  nav a {
+    padding: 10px;
+  }
+
 
   /* Style for the title-box */
   #title-box {
     background-color: #007acc; /* Set a different background color for the title box */
     padding: 10px; /* Add padding to the title box */
     border-radius: 5px; /* Add rounded corners to the title box */
+    margin: 20px;
   }
 
   #page-title {
     margin: 0; /* Remove default margin for the h1 element */
     color: #fff; /* Set the text color for the title */
+  }
+
+  #post-box {
+    background-color: #362f2f;
+    border-radius: 5px;
+    border: 2px solid black; /* Set the border style, width, and color */
   }
