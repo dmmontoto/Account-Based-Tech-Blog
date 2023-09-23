@@ -1,13 +1,36 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{post}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount"></span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {{!-- Display Post --}}
+      <div class="post">
+        <h2>{{ name }}</h2>
+        <p>{{ description }}</p>
+        <p>Posted by: {{ user.name }}</p>
+        <p>Date Created: {{ date_created }}</p>
+      </div>
+
+      {{!-- Display Comments --}}
+      <div class="comments">
+        <h3>Comments</h3>
+        {{#each comments}}
+        <div class="comment">
+          <p><strong>{{ user.name }}</strong> said:</p>
+          <p>{{ description }}</p>
+        </div>
+        {{/each}}
+      </div>
+      <div>
+        {{#if logged_in}}
+        <div class="form-group" id="comment-creator">
+          <label for="project-name">Comment:</label>
+          <input class="form-input" type="text" id="project-name" name="project-name" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Post</button>
+        </div>
+        </form>
+        {{/if}}
+      </div>
+    </div>
+  </div>
 </div>

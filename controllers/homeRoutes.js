@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -35,6 +35,16 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        // Include comments associated with the post
+        {
+          model: Comment,
+          include: [
+            {
+              model: User,
+              attributes: ['name'],
+            },
+          ],
+        },
       ],
     });
 
@@ -48,6 +58,7 @@ router.get('/post/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
