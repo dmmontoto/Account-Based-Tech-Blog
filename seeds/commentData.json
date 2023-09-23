@@ -1,0 +1,18 @@
+[
+    {
+      "description": "My name is Sal. This is cool.",
+      "user_id": 1, 
+      "post_id": 1
+    },
+    {
+      "description": "My name is David. I am jealous.",
+      "user_id": 4, 
+      "post_id": 1
+    },
+    {
+      "description": "Wow!",
+      "user_id": 4, 
+      "post_id": 2
+    }
+  ]
+  
