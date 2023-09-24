@@ -1,22 +1,26 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div>
       {{!-- Display Post --}}
-      <div class="post">
-        <h2>{{ name }}</h2>
+      <div class="post" id="post-box">
+        <div id="post-header">
+          <h2>{{ name }}</h2>
+        </div>
         <p>{{ description }}</p>
-        <p>Posted by: {{ user.name }}</p>
-        <p>Date Created: {{ format_date date_created }}</p>
+        <p>Posted by: {{ user.username }}</p>
+        <p>Date Posted: {{ format_date date_created }}</p>
       </div>
 
       {{!-- Display Comments --}}
       <div class="comments">
-        <h3>Comments</h3>
+        <div class="align-center" id="comment-title">
+          <h3>Comments</h3>
+        </div>
         {{#each comments}}
-        <div class="comment">
-          <p><strong>{{ user.name }}</strong> said:</p>
-          <p>{{ description }}</p>
-          <p>{{ format_date date_created }}</p>
+        <div class="comment" id="comment">
+          <p><strong>{{ user.username }}</strong> said:</p>
+          <p id="comment-description">{{ description }}</p>
+          <p>Date posted: {{ format_date date_created }}</p>
         </div>
         {{/each}}
       </div>
@@ -26,7 +30,7 @@
           <input type="hidden" id="post-id" name="post_id" value="{{id}}" />
 
           <div class="form-group" id="comment-creator">
-            <label for="comment-description">Comment:</label>
+            <label for="comment-description">Add Comment:</label>
             <input class="form-input" type="text" id="comment-description" name="description" />
           </div>
           <div class="form-group">

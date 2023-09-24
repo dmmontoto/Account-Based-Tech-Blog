@@ -37,7 +37,7 @@ header {
     flex-direction: column;
     align-items: flex-start; /* Align items to the left */
     padding: 2rem;
-    background-color: #362f2f; /* Set the background color of the header */
+    background-color:#3e3e3e; /* Set the background color of the header */
   }
 
   /* Style for the nav */
@@ -65,24 +65,58 @@ header {
   }
 
   #post-box {
-    background-color: #362f2f;
+    background-color: #69aadb;
     border-radius: 5px;
     border: 2px solid black;
     display: flex; /* Make the entire post-box a flex container */
     flex-direction: column; /* Set default direction to column */
     margin-bottom: 20px;
-    padding: 10px;
+    /* padding: 10px; */
   }
   
   #post-header {
-    background-color: #056605;
+    padding: 5px;
+    background-color: #ffffff;
     display: flex; /* Make the post-header a flex container */
     flex-direction: row; /* Display name and description on the same row */
     justify-content: space-between; /* Add space between name and description */
     align-items: center; /* Vertically center align name and description */
   }
+
+#post-header h2 {
+  margin-left: 10px;
+}
+
+  #post-header p {
+    padding: 5px;
+    font-size: 20px;
+  }
   
   #post-description {
     margin-top: 10px; /* Add spacing between post-header and post-description */
   }
+
+  #comment-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    margin: 20px;
+    margin-top: 40px;
+    color: white;
+  }
+
+#comment {
+  background-color: #69aadb;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: flex; /* Make the entire post-box a flex container */
+  flex-direction: column; /* Set default direction to column */
+  margin-bottom: 20px;
+}
+
+#comment-description {
+  font-size: 20px;
+  margin-left: 8px;
+}
   
