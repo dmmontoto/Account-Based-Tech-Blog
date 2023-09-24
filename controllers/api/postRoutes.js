@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -31,6 +31,22 @@ router.delete('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(postData);
   } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post('/:id', withAuth, async (req, res) => {
+  try {
+    const newComment = await Comment.create({
+      description: req.body.description, // Get the description from the request body
+      post_id: req.body.post_id, // Get the post_id from the request body
+      user_id: req.session.user_id,
+    });
+
+    // Redirect back to the post page
+    res.redirect(`/post/${req.body.post_id}`);
+  } catch (err) {
+    console.error(err);
     res.status(500).json(err);
   }
 });
