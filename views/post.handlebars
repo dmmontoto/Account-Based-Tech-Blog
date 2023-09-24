@@ -6,7 +6,7 @@
         <h2>{{ name }}</h2>
         <p>{{ description }}</p>
         <p>Posted by: {{ user.name }}</p>
-        <p>Date Created: {{ date_created }}</p>
+        <p>Date Created: {{ format_date date_created }}</p>
       </div>
 
       {{!-- Display Comments --}}
@@ -16,6 +16,7 @@
         <div class="comment">
           <p><strong>{{ user.name }}</strong> said:</p>
           <p>{{ description }}</p>
+          <p>{{ format_date date_created }}</p>
         </div>
         {{/each}}
       </div>

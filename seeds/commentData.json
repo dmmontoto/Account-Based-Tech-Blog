@@ -1,16 +1,19 @@
 [
     {
       "description": "My name is Sal. This is cool.",
+      "date_created": "9/23/2023",
       "user_id": 1, 
       "post_id": 1
     },
     {
-      "description": "My name is David. I am impressed.",
+      "description": "My name is David. Thanks for sharing!",
+      "date_created": "9/23/2023",
       "user_id": 4, 
       "post_id": 1
     },
     {
       "description": "Wow!",
+      "date_created": "9/23/2023",
       "user_id": 4, 
       "post_id": 2
     }
