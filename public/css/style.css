@@ -71,7 +71,7 @@ header {
     display: flex; /* Make the entire post-box a flex container */
     flex-direction: column; /* Set default direction to column */
     margin-bottom: 20px;
-    /* padding: 10px; */
+    border-radius: 10px;
   }
   
   #post-header {
@@ -81,6 +81,8 @@ header {
     flex-direction: row; /* Display name and description on the same row */
     justify-content: space-between; /* Add space between name and description */
     align-items: center; /* Vertically center align name and description */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
 
 #post-header h2 {
@@ -113,10 +115,45 @@ header {
   display: flex; /* Make the entire post-box a flex container */
   flex-direction: column; /* Set default direction to column */
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 #comment-description {
   font-size: 20px;
   margin-left: 8px;
 }
+
+#welcome {
+  display: inline-block; /* Display as an inline-block element */
+  background-color: #69aadb;
+  padding: 5px; /* Add some padding to create space around the text */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#welcome h2 {
+  margin: 0.5rem 0.5rem 0.5rem;
+  line-height: 1.25;
+}
+
+#user-posts {
+  background-color: white;
+  border-radius: 10px; /* Adjust the value to control the roundness of the edges */
+}
+
+#user-posts-title {
+  border-bottom: 2px solid black; /* Add a black border at the bottom */
+  padding-top: 10px; /* Add some spacing between the title and posts */
+}
+
+/* Style for the individual posts */
+.row.mb-2 {
+  padding: 10px 0; /* Add spacing between each post */
+}
+
+#individual-user-posts {
   
+}

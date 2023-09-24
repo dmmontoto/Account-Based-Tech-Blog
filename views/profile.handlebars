@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-auto">
+  <div class="col-auto" id="welcome">
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
@@ -24,11 +24,13 @@
   </div>
 
   {{#if posts.length}}
-  <div class="col-md-6 post-list">
-    <h3>Current Posts:</h3>
+  <div class="col-md-6 post-list" id="user-posts">
+    <div id="user-posts-title">
+      <h3>Current Posts:</h3>
+    </div>
 
     {{#each posts as |post|}}
-    <div class="row mb-2">
+    <div class="row mb-2" id="individual-user-posts">
       <div class="col-md-8">
         <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
       </div>
